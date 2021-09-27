@@ -133,50 +133,25 @@ these files into one single table using the UNION ALL command to clean and
 analyze it efficiently. Also we added two columns: ride_length and day_of_week,
 as we will require them both for the analyze process.
 
-![](media/79487b3185049e1f02dd41855b2b4592.png)
+```sql
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Code Language
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-CREATE TABLE
-
+CREATE TABLE 
 Cyclistic_bike_share.tripdata_union AS
-
-SELECT DATETIME_DIFF(ended_at, started_at, SECOND) AS \`ride_length\`,
-
-EXTRACT(DAYOFWEEK FROM started_at) AS \`day_of_week\`,
-
-\*
-
+SELECT DATETIME_DIFF(ended_at, started_at, SECOND) AS `ride_length`, 
+       EXTRACT(DAYOFWEEK FROM started_at) AS `day_of_week`,
+       *
 FROM (
+SELECT 'sept_2020' AS filename, * FROM `sage-artifact-322407.Cyclistic_bike_share.sept_2020` UNION ALL
+SELECT 'oct_2020' AS filename, * FROM `sage-artifact-322407.Cyclistic_bike_share.oct_2020` UNION ALL
+SELECT 'nov_2020' AS filename, * FROM `sage-artifact-322407.Cyclistic_bike_share.nov_2020` UNION ALL
+SELECT 'dec_2020' AS filename, * FROM `sage-artifact-322407.Cyclistic_bike_share.dec_2020` UNION ALL
+SELECT 'jan_2021' AS filename, * FROM `sage-artifact-322407.Cyclistic_bike_share.jan_2021` UNION ALL
+SELECT 'feb_2021' AS filename, * FROM `sage-artifact-322407.Cyclistic_bike_share.feb_2021` UNION ALL
+SELECT 'mar_2021' AS filename, * FROM `sage-artifact-322407.Cyclistic_bike_share.mar_2021` UNION ALL
+SELECT 'apr_2021' AS filename, * FROM `sage-artifact-322407.Cyclistic_bike_share.apr_2021` UNION ALL
+SELECT 'may_2021' AS filename, * FROM `sage-artifact-322407.Cyclistic_bike_share.may_2021` )
 
-SELECT 'sept_2020' AS filename, \* FROM
-\`sage-artifact-322407.Cyclistic_bike_share.sept_2020\` UNION ALL
-
-SELECT 'oct_2020' AS filename, \* FROM
-\`sage-artifact-322407.Cyclistic_bike_share.oct_2020\` UNION ALL
-
-SELECT 'nov_2020' AS filename, \* FROM
-\`sage-artifact-322407.Cyclistic_bike_share.nov_2020\` UNION ALL
-
-SELECT 'dec_2020' AS filename, \* FROM
-\`sage-artifact-322407.Cyclistic_bike_share.dec_2020\` UNION ALL
-
-SELECT 'jan_2021' AS filename, \* FROM
-\`sage-artifact-322407.Cyclistic_bike_share.jan_2021\` UNION ALL
-
-SELECT 'feb_2021' AS filename, \* FROM
-\`sage-artifact-322407.Cyclistic_bike_share.feb_2021\` UNION ALL
-
-SELECT 'mar_2021' AS filename, \* FROM
-\`sage-artifact-322407.Cyclistic_bike_share.mar_2021\` UNION ALL
-
-SELECT 'apr_2021' AS filename, \* FROM
-\`sage-artifact-322407.Cyclistic_bike_share.apr_2021\` UNION ALL
-
-SELECT 'may_2021' AS filename, \* FROM
-\`sage-artifact-322407.Cyclistic_bike_share.may_2021\` )
+```
 
 On successful merging the data, we obtained some 25,56,715 rows of raw data
 which needs to be processed and analyzed in order to create visualizations to
