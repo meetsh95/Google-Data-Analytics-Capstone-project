@@ -62,7 +62,8 @@ riders use Cyclistic bikes differently?
 
 -   Consider key stakeholders
 
-**Deliverable -** A clear statement of the business task    
+**Deliverable -** A clear statement of the business task  
+
 
 **2. Prepare**
 
