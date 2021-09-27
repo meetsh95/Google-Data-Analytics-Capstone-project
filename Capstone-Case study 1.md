@@ -60,27 +60,27 @@ riders use Cyclistic bikes differently?
 
 **Guiding questions**
 
--   Where is your data located?
+-   Where is your data located?  
 The data is located [here](https://divvy-tripdata.s3.amazonaws.com/index.html),
 where I have taken the data of 9 months i.e. files from Sept 2020 (202009) to
 May 2021 (202105).
 
--   How is the data organized?
+-   How is the data organized?  
 The data is organized into monthly bike trips in a csv format.
 
 -   Are there issues with bias or credibility in this data? Does your data
-    ROCCC?
+    ROCCC?  
 The data source is original and also updated till the date of starting this
 project. It includes bike trips of every single day of last 9 months so its 100%
 credible and reliable. Also the data doesn’t reveals any personal information of
 the riders.
 
--   How are you addressing licensing, privacy, security, and accessibility?
+-   How are you addressing licensing, privacy, security, and accessibility?  
 The data is in public domain and has been officially made available by Motivate
 International Inc. under this
 [license](https://www.divvybikes.com/data-license-agreement).
 
--   How did you verify the data’s integrity?
+-   How did you verify the data’s integrity?  
 After performing the integrity checks on the cleaned data, I found that that
 there ae no duplicates and null values in the data which I am going to analyse.
 
@@ -98,16 +98,16 @@ there ae no duplicates and null values in the data which I am going to analyse.
 
 **Guiding questions**
 
--   What tools are you choosing and why?
+-   What tools are you choosing and why?  
 I have used SQL standard dialect on BigQuery to clean and analyse the data, and
 Tableau to create visualizations from the analysed data.
 
--   Have you ensured your data’s integrity?
+-   Have you ensured your data’s integrity?  
 The data’s integrity has been ensured by performing data integrity checks and
 cleaning the data.
 
 -   What steps have you taken to ensure that your data is clean? Have you
-    documented your cleaning process so you can review and share those results?
+    documented your cleaning process so you can review and share those results?  
 Following is the documentation of my cleaning process:
 
 Since the data is broken into multiple files by months, we first integrated all
@@ -236,7 +236,7 @@ On successfully executing this, we got the following results:
 
 **Guiding questions**
 
--   How should you organize your data to perform analysis on it?
+-   How should you organize your data to perform analysis on it?  
  Organizing the data included removing unwanted columns, correcting data
  types and sorting the rides according to the time. After that, this data is
  analyzed and aggregated in the following way:
