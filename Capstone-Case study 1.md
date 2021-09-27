@@ -62,7 +62,7 @@ riders use Cyclistic bikes differently?
 
 -   Consider key stakeholders
 
-**Deliverable -** A clear statement of the business task
+**Deliverable -** A clear statement of the business task    
 
 **2. Prepare**
 
@@ -107,7 +107,7 @@ there ae no duplicates and null values in the data which I am going to analyse.
 
 -   Determine the credibility of data
 
-**Deliverable -** A description of all data sources used
+**Deliverable -** A description of all data sources used    
 
 **3. Process**
 
