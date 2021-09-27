@@ -45,7 +45,7 @@ to identify trends.
 
 **Guiding questions**
 
--   What is the problem you are trying to solve?
+-   What is the problem you are trying to solve?  
 We are trying to solve the problem statement: How do annual members and casual
 riders use Cyclistic bikes differently?
 
