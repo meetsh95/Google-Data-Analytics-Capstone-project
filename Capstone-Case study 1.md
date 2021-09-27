@@ -46,60 +46,47 @@ to identify trends.
 **Guiding questions**
 
 -   What is the problem you are trying to solve?
-
 We are trying to solve the problem statement: How do annual members and casual
 riders use Cyclistic bikes differently?
 
 **Key tasks**
-
 -   Identify the business task
-
 -   Consider key stakeholders
 
 **Deliverable** - A clear statement of the business task
-
-
 ***2. Prepare***
 
 **Guiding questions**
 
 -   Where is your data located?
-
 The data is located [here](https://divvy-tripdata.s3.amazonaws.com/index.html),
 where I have taken the data of 9 months i.e. files from Sept 2020 (202009) to
 May 2021 (202105).
 
 -   How is the data organized?
-
 The data is organized into monthly bike trips in a csv format.
 
 -   Are there issues with bias or credibility in this data? Does your data
     ROCCC?
-
 The data source is original and also updated till the date of starting this
 project. It includes bike trips of every single day of last 9 months so its 100%
 credible and reliable. Also the data doesn’t reveals any personal information of
 the riders.
 
 -   How are you addressing licensing, privacy, security, and accessibility?
-
 The data is in public domain and has been officially made available by Motivate
 International Inc. under this
 [license](https://www.divvybikes.com/data-license-agreement).
 
 -   How did you verify the data’s integrity?
-
 After performing the integrity checks on the cleaned data, I found that that
 there ae no duplicates and null values in the data which I am going to analyse.
 
 **Key tasks**
 
 -   Download data and store it appropriately.
-
 -   Identify how it’s organized.
-
 -   Sort and filter the data.
-
 -   Determine the credibility of data
 
 **Deliverable -** A description of all data sources used    
@@ -110,18 +97,15 @@ there ae no duplicates and null values in the data which I am going to analyse.
 **Guiding questions**
 
 -   What tools are you choosing and why?
-
 I have used SQL standard dialect on BigQuery to clean and analyse the data, and
 Tableau to create visualizations from the analysed data.
 
 -   Have you ensured your data’s integrity?
-
 The data’s integrity has been ensured by performing data integrity checks and
 cleaning the data.
 
 -   What steps have you taken to ensure that your data is clean? Have you
     documented your cleaning process so you can review and share those results?
-
 Following is the documentation of my cleaning process:
 
 Since the data is broken into multiple files by months, we first integrated all
@@ -184,14 +168,10 @@ won’t return the bike within a day (24 hrs), then the company deems this case 
 stolen or lost bikes. So we will filter the following data:
 
 -   Unique ride_id whose character length is not equal to 16
-
 -   start_station_name, start_station_id, end_station_name , end_station_id,
     start_lat , end_lat , start_lng , end_lng whose values are NULL.
-
 -   Any column data with a blank space present
-
 -   ride_length less than 60 secs and greater then (60\*60\*24) secs
-
 -   start_station_name and end_station_name with ‘TEST’ and ‘Base’ as a
     value.(since I assume from my data scanning that ‘Base’ and ‘TEST’ won’t be
     the name of any station in the dataset)
@@ -243,11 +223,8 @@ On successfully executing this, we got the following results:
 **Key tasks**
 
 -   Check the data for errors.
-
 -   Choose your tools.
-
 -   Transform the data so you can work with it effectively.
-
 -   Document the cleaning process
 
 **Deliverable -** Documentation of any cleaning or manipulation of data
@@ -258,10 +235,9 @@ On successfully executing this, we got the following results:
 **Guiding questions**
 
 -   How should you organize your data to perform analysis on it?
-
-1.  Organizing the data included removing unwanted columns, correcting data
-    types and sorting the rides according to the time. After that, this data is
-    analyzed and aggregated in the following way:
+ Organizing the data included removing unwanted columns, correcting data
+ types and sorting the rides according to the time. After that, this data is
+ analyzed and aggregated in the following way:
 
 | ridership     | mean_ride_length_mins | total_trips | total_round_trips | total_days     |
 |---------------|-----------------------|-------------|-------------------|----------------|
@@ -329,11 +305,8 @@ On successfully executing this, we got the following results:
 **Key tasks**
 
 -   Aggregate your data so it’s useful and accessible.
-
 -   Organize and format your data.
-
 -   Perform calculations.
-
 -   Identify trends and relationships.
 
 **Deliverable -** A summary of your analysis
@@ -347,11 +320,8 @@ here](https://public.tableau.com/views/GoogleDACapstone/Story1?:language=en-US&:
 **Key tasks**
 
 -   Determine the best way to share your findings.
-
 -   Create effective data visualizations.
-
 -   Present your findings.
-
 -   Ensure your work is accessible.
 
 **Deliverable -** Supporting visualizations and key findings
@@ -379,9 +349,7 @@ Based on my findings, following are my top three recommendations:
 **Key tasks**
 
 -   Create your portfolio.
-
 -   Add your case study.
-
 -   Practice presenting your case study to a friend or family member.
 
 **Deliverable -** Your top three recommendations based on your analysis
