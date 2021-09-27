@@ -54,20 +54,22 @@ to identify trends.
 We are trying to solve the problem statement: How do annual members and casual
 riders use Cyclistic bikes differently?
 
--   How can your insights drive business decisions?
-
 **Key tasks**
 
 -   Identify the business task
 
 -   Consider key stakeholders
 
-Deliverable - A clear statement of the business task
+**Deliverable** - A clear statement of the business task
 
 
-2. Prepare
 
-Guiding questions
+
+
+
+**2. Prepare**
+
+**Guiding questions**
 
 -   Where is your data located?
 
