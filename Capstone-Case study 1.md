@@ -1,6 +1,6 @@
 Case Study
 
-**How Does a Bike-Share Navigate Speedy Success?**
+***How Does a Bike-Share Navigate Speedy Success?***
 
 **Scenario:**
 
