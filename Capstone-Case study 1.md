@@ -1,6 +1,6 @@
 Case Study
 
-***How Does a Bike-Share Navigate Speedy Success?***
+**How Does a Bike-Share Navigate Speedy Success?**
 
 **Scenario:**
 
@@ -45,7 +45,7 @@ to identify trends.
 
 **Steps in the Analysis:**
 
-**1. Ask**
+***1. Ask***
 
 **Guiding questions**
 
@@ -67,7 +67,7 @@ riders use Cyclistic bikes differently?
 
 
 
-**2. Prepare**
+***2. Prepare***
 
 **Guiding questions**
 
@@ -112,7 +112,7 @@ there ae no duplicates and null values in the data which I am going to analyse.
 
 **Deliverable -** A description of all data sources used    
 
-**3. Process**
+***3. Process***
 
 **Guiding questions**
 
@@ -207,7 +207,39 @@ We will add a column of round_trip to know how many round trips have been
 completed by the users and we will also extract the DATE from the DATETIME of
 started_at column.
 
-![](media/fd0b537775b8cddebb5dcc6504987cc7.png)
+```sql
+CREATE TABLE 
+Cyclistic_bike_share.tripdata_cleaned AS
+SELECT
+    DISTINCT TRIM(ride_id) AS ride_id,
+    CASE WHEN UPPER(start_station_name) = UPPER(end_station_name) THEN 1 ELSE 0 END AS round_trip,
+    TRIM(rideable_type) AS rideable_type, 
+    TRIM(start_station_name) AS start_station_name,
+    TRIM(end_station_name) AS end_station_name,
+    TRIM(member_casual) AS member_casual,
+    CAST(started_at AS DATE) AS started_date, 
+    * EXCEPT (ride_id, rideable_type, start_station_name, end_station_name, member_casual)
+
+FROM `sage-artifact-322407.Cyclistic_bike_share.tripdata_union`
+
+WHERE
+    LENGTH(ride_id) = 16
+    AND ride_length BETWEEN 60 AND (60*60*24)
+    AND started_at IS NOT NULL
+    AND ended_at IS NOT NULL
+    AND start_station_name IS NOT NULL
+    AND end_station_name IS NOT NULL
+    AND start_station_id IS NOT NULL
+    AND end_station_id IS NOT NULL
+    AND start_lat IS NOT NULL
+    AND end_lat IS NOT NULL
+    AND start_lat IS NOT NULL
+    AND end_lng IS NOT NULL
+    AND UPPER(start_station_name) NOT LIKE '%BASE%'
+    AND UPPER(end_station_name) NOT LIKE '%BASE%'
+    AND UPPER(start_station_name) NOT LIKE '%TEST%'
+    AND UPPER(end_station_name) NOT LIKE '%TEST%'
+```
 
 On successfully executing this, we got the following results:
 
@@ -227,7 +259,7 @@ On successfully executing this, we got the following results:
 
 **Deliverable -** Documentation of any cleaning or manipulation of data
 
-**4. Analyze**
+***4. Analyze***
 
 **Guiding questions**
 
@@ -308,7 +340,7 @@ On successfully executing this, we got the following results:
 
 **Deliverable -** A summary of your analysis
 
-**5. Share**
+***5. Share***
 
 The data visualization and findings from it can be [seen
 here](https://public.tableau.com/views/GoogleDACapstone/Story1?:language=en-US&:display_count=n&:origin=viz_share_link).
@@ -325,7 +357,7 @@ here](https://public.tableau.com/views/GoogleDACapstone/Story1?:language=en-US&:
 
 **Deliverable -** Supporting visualizations and key findings
 
-**6. Act**
+***6. Act***
 
 **Guiding questions**
 
