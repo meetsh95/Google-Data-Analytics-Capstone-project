@@ -1,6 +1,6 @@
 Case Study
 
-**How Does a Bike-Share Navigate Speedy Success?**
+# **How Does a Bike-Share Navigate Speedy Success?**
 
 **Scenario:**
 
@@ -32,16 +32,12 @@ to identify trends.
 **Deliverables:**
 
 1.  A clear statement of the business task
-
 2.  A description of all data sources used
-
 3.  Documentation of any cleaning or manipulation of data
-
 4.  A summary of your analysis
-
 5.  Supporting visualizations and key findings
-
 6.  Your top three recommendations based on your analysis
+
 
 **Steps in the Analysis:**
 
@@ -61,10 +57,6 @@ riders use Cyclistic bikes differently?
 -   Consider key stakeholders
 
 **Deliverable** - A clear statement of the business task
-
-
-
-
 
 
 ***2. Prepare***
@@ -111,6 +103,7 @@ there ae no duplicates and null values in the data which I am going to analyse.
 -   Determine the credibility of data
 
 **Deliverable -** A description of all data sources used    
+
 
 ***3. Process***
 
@@ -259,6 +252,7 @@ On successfully executing this, we got the following results:
 
 **Deliverable -** Documentation of any cleaning or manipulation of data
 
+
 ***4. Analyze***
 
 **Guiding questions**
@@ -273,6 +267,7 @@ On successfully executing this, we got the following results:
 |---------------|-----------------------|-------------|-------------------|----------------|
 | Casual Riders | 31.4                  | 860738      | 118606            | 273 (9 months) |
 | Member Riders | 14.1                  | 1361752     | 49763             | 273 (9 months) |
+
 
 | months   | ridership | total_trips | total_round_trips | mean_ride_length_mins | total_days |
 |----------|-----------|-------------|-------------------|-----------------------|------------|
@@ -295,6 +290,7 @@ On successfully executing this, we got the following results:
 | May-2021 | casual    | 214410      | 29080             | 33.4                  | 31         |
 | May-2021 | member    | 230476      | 7765              | 14.5                  | 31         |
 
+
 | ridership | rideable_type | mean_ride_length_mins | total_trips | total_round_trips | total_days |
 |-----------|---------------|-----------------------|-------------|-------------------|------------|
 | casual    | docked_bike   | 38.8                  | 383460      | 67380             | 273        |
@@ -303,6 +299,7 @@ On successfully executing this, we got the following results:
 | member    | docked_bike   | 14.7                  | 489979      | 19526             | 96         |
 | member    | classic_bike  | 14.2                  | 568551      | 20996             | 181        |
 | member    | electric_bike | 12.9                  | 303222      | 9241              | 273        |
+
 
 | ridership | day_of_week | mean_ride_length_mins | total_trips | total_round_trips |
 |-----------|-------------|-----------------------|-------------|-------------------|
@@ -320,6 +317,7 @@ On successfully executing this, we got the following results:
 | member    | 5           | 13.1                  | 194891      | 6590              |
 | member    | 6           | 13.8                  | 201549      | 6931              |
 | member    | 7           | 15.7                  | 201709      | 7535              |
+
 
 | ridership | type_of_day | mean_ride_length_mins | total_trips | total_round_trips |
 |-----------|-------------|-----------------------|-------------|-------------------|
@@ -340,6 +338,7 @@ On successfully executing this, we got the following results:
 
 **Deliverable -** A summary of your analysis
 
+
 ***5. Share***
 
 The data visualization and findings from it can be [seen
@@ -356,6 +355,7 @@ here](https://public.tableau.com/views/GoogleDACapstone/Story1?:language=en-US&:
 -   Ensure your work is accessible.
 
 **Deliverable -** Supporting visualizations and key findings
+
 
 ***6. Act***
 
